@@ -1,12 +1,12 @@
 import {createElement} from '../render.js';
 
-function createTaskListTemplate() {
-  return '<div class="page-body__container</div>';
+function createListEmptyTemplate() {
+  return '<p class="trip-events__msg">Click New Event to create your first point</p>';
 }
 
-export default class TaskListView {
+export default class EmptyView {
   getTemplate() {
-    return createTaskListTemplate();
+    return createListEmptyTemplate();
   }
 
   getElement() {

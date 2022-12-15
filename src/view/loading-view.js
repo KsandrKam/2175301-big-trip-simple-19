@@ -1,10 +1,10 @@
 import {createElement} from '../render.js';
 
 function createFormEditTemplate() {
-  return '<button class="trip-main__event-add-btn  btn  btn--big  btn--yellow" type="button">New event</button>';
+  return '<p class="trip-events__msg">Loading...</p>';
 }
 
-export default class FormEditView {
+export default class LoadingView {
   getTemplate() {
     return createFormEditTemplate();
   }

@@ -35,7 +35,7 @@ function createTaskTemplate() {
   );
 }
 
-export default class TaskView {
+export default class TripPointView {
   getTemplate() {
     return createTaskTemplate();
   }
