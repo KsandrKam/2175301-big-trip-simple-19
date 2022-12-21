@@ -10,7 +10,7 @@
     "not op_mini all",
     "not < 0.25%"
   ],
-    "scripts": {
+  "scripts": {
     "lint": "eslint src/",
     "build": "webpack --mode production",
     "start": "webpack serve --mode development --open"
@@ -28,5 +28,9 @@
   },
   "engines": {
     "node": "18"
+  },
+  "dependencies": {
+    "dayjs": "1.11.7",
+    "flatpickr": "4.6.13"
   }
 }
