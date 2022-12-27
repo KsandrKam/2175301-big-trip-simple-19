@@ -5,11 +5,14 @@ import PointView from '../view/point-view.js';
 import {render, RenderPosition} from '../render.js';
 import PointListView from '../view/point-list-view.js';
 import { isEscapeKey } from '../utils';
+
 export default class TripPresenter {
   #pointListComponent = new PointListView();
+
   #pointContainer = null;
   #pointsModel = null;
   #listPoints = [];
+
   constructor({pointContainer, pointsModel}) {
     this.#pointContainer = pointContainer;
     this.#pointsModel = pointsModel;

@@ -1,21 +1,24 @@
 
 import {createElement} from '../render.js';
-import { destinations, offersByType } from '../mock/point.js';
+import { destinations, offersByType } from '../constants/point.js';
 import dayjs from 'dayjs';
-import { DATE_FORMAT } from '../const.js';
+import { DATE_FORMAT } from '../constants/mock';
+//import {EVENT_TYPES, EVENT_OFFERS} from '../constants/view/types-event.js';
 
 const createPointEditTemplate = (point) => {
   const {type, offers, destination, basePrice, dateFrom, dateTo, id} = point;
   const pointTypeOffer = offersByType.find((offer) => offer.type === type);
   const pointDestination = destinations.find((item) => destination === item.id);
+
   const parceDateStart = dayjs(dateFrom);
   const parceDateEnd = dayjs(dateTo);
+
   const tripOptionsList = offersByType.map((element) =>
     `<div class="event__type-item">
-        <input id="event-type-${element.type}-${element.id}" class="event__type-input  visually-hidden" type="radio" name="event-type" value="${element.type}">
-        <label class="event__type-label  event__type-label--${element.type}" for="event-type-${element.type}-${element.id}">${element.type}</label>
-      </div>
-      `).join('');
+  <input id="event-type-${element.type}-${element.id}" class="event__type-input  visually-hidden" type="radio" name="event-type" value="${element.type}">
+  <label class="event__type-label  event__type-label--${element.type}" for="event-type-${element.type}-${element.id}">${element.type}</label>
+  </div>
+  `).join('');
   const offersTemplate = () => {
     let template = '';
     if (pointTypeOffer) {
@@ -129,3 +132,6 @@ export default class TripEditView {
     this.#element = null;
   }
 }
+export { createPointEditTemplate };
+
+

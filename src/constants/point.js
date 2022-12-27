@@ -1,5 +1,5 @@
 import { getRandomInteger, getRandomArrayElement } from '../utils';
-import { POINTS_TYPES } from '../const.js';
+import { POINTS_TYPES } from './mock.js';
 import { getRandomDates } from './dates.js';
 import { getDestination } from './destinations.js';
 import { getOfferByType } from './offers.js';

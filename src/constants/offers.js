@@ -1,5 +1,5 @@
 import { getRandomArrayElement, getRandomInteger } from '../utils';
-import { OFFERS_TITLES, POINTS_TYPES } from '../const.js';
+import { OFFERS_TITLES, POINTS_TYPES } from './mock.js';
 
 const MIN_OFFER_PRICE = 20;
 const MAX_OFFER_PRICE = 250;

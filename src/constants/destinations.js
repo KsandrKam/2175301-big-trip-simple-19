@@ -1,5 +1,5 @@
 import { getRandomInteger, getRandomArrayElement } from '../utils';
-import { DESCRIPTIONS, CITIES_NAMES } from '../const.js';
+import { DESCRIPTIONS, CITIES_NAMES } from './mock.js';
 
 const MIN_COUNT_DESCRIPTIONS = 1;
 const MAX_COUNT_DESCRIPTIONS = 5;
