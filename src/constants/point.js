@@ -12,18 +12,18 @@ const MIN_BASE_PRICE = 100;
 const MAX_BASE_PRICE = 1000;
 
 const offersByType = Array.from({ length: OFFERS_BY_TYPE_COUNT }, getOfferByType);
-const destinations = Array.from({ length: getRandomInteger(MIN_DESTINATION_COUNT, MAX_DESTINATION_COUNT) }, (_value, index) => getDestination(index));
+const destinations = Array.from({ length: getRandomInteger(MIN_DESTINATION_COUNT, MAX_DESTINATION_COUNT) }, (value, index) => getDestination(index));
 const getRandomOffersIds = () => {
   const randomOffers = getRandomArrayElement(offersByType).offers;
-  const index = [];
+  const ids = [];
   const lengthOfArray = getRandomInteger(MIN_ARRAY_LENGTH, randomOffers.length);
-  for (index.length = 0; index.length <= lengthOfArray; index.length ++) {
+  while (ids.length <= lengthOfArray) {
     const currentElement = getRandomInteger(MIN_ARRAY_LENGTH, randomOffers.length);
-    if (!index.includes(currentElement)) {
-      index.push(currentElement);
+    if (!ids.includes(currentElement)) {
+      ids.push(currentElement);
     }
   }
-  return index;
+  return ids;
 };
 const getRandomPoint = (count) => {
   const randomDates = getRandomDates();

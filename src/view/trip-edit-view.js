@@ -13,12 +13,12 @@ const createPointEditTemplate = (point) => {
   const parceDateStart = dayjs(dateFrom);
   const parceDateEnd = dayjs(dateTo);
 
+
   const tripOptionsList = offersByType.map((element) =>
     `<div class="event__type-item">
   <input id="event-type-${element.type}-${element.id}" class="event__type-input  visually-hidden" type="radio" name="event-type" value="${element.type}">
   <label class="event__type-label  event__type-label--${element.type}" for="event-type-${element.type}-${element.id}">${element.type}</label>
-  </div>
-  `).join('');
+  </div>`).join('');
   const offersTemplate = () => {
     let template = '';
     if (pointTypeOffer) {
@@ -132,6 +132,6 @@ export default class TripEditView {
     this.#element = null;
   }
 }
-export { createPointEditTemplate };
+//export { createPointEditTemplate };
 
 

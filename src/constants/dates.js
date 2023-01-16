@@ -24,6 +24,7 @@ const getRandomDate = () =>
 const getRandomDates = () => {
   const date1 = getRandomDate();
   const date2 = getRandomDate();
+
   if (date2.isAfter(date1)) {
     return {
       dateFrom: date1.toISOString(),

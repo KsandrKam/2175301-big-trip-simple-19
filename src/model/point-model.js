@@ -1,6 +1,6 @@
 import { getRandomPoint } from '../constants/point.js';
 
-const POINTS = 5;
+const POINTS = 4;
 
 export default class PointModel {
   #point = Array.from({length: POINTS}, getRandomPoint);
